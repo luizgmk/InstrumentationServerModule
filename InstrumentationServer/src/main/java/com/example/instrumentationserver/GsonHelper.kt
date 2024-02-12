@@ -1,4 +1,4 @@
-package com.example.jc.utils.instrumentation_server
+package com.example.instrumentationserver
 
 import com.google.gson.Gson
 import kotlinx.coroutines.sync.Mutex

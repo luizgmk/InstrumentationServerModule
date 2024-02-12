@@ -4,7 +4,7 @@ import android.app.Application
 import com.example.jc.data.DogBreedsRepository
 import com.example.jc.data.local.DogBreedsDB
 import com.example.jc.model.DogBreed
-import com.example.jc.utils.instrumentation_server.InstrumentationServer
+import com.example.instrumentationserver.InstrumentationServer
 import com.example.jc.view.main.MainActivityViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
@@ -49,10 +49,8 @@ class App : Application() {
                 // Serve singleton classes injected by DI
                 val db: DogBreedsDB by inject()
                 val repo: DogBreedsRepository by inject()
-                val mainActivityViewModel : MainActivityViewModel by inject()
                 server.addSingleton(db)
                 server.addSingleton(repo)
-                server.addSingleton(mainActivityViewModel)
 
                 // Serve also DogBreed class for individual instantiation per call
                 server.addClass(DogBreed::class)

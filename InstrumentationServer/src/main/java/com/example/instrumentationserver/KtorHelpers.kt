@@ -1,6 +1,6 @@
-package com.example.jc.utils.instrumentation_server
+package com.example.instrumentationserver
 
-import com.example.jc.utils.instrumentation_server.GsonHelper.Companion.gson
+import com.example.instrumentationserver.GsonHelper.Companion.gson
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.response.respond

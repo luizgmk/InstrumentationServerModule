@@ -1,4 +1,4 @@
-package com.example.jc.utils.instrumentation_server
+package com.example.instrumentationserver
 
 import kotlin.reflect.KCallable
 import kotlin.reflect.jvm.kotlinFunction

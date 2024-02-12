@@ -1,7 +1,8 @@
-package com.example.jc.utils.instrumentation_server
+package com.example.instrumentationserver
 
-import com.example.jc.utils.instrumentation_server.GsonHelper.Companion.gson
-import com.example.jc.utils.instrumentation_server.KtorHelpers.Companion.respondWithException
+import android.util.Log
+import com.example.instrumentationserver.GsonHelper.Companion.gson
+import com.example.instrumentationserver.KtorHelpers.Companion.respondWithException
 import com.google.gson.internal.LinkedTreeMap
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.call
@@ -17,7 +18,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
-import timber.log.Timber
 import kotlin.coroutines.suspendCoroutine
 import kotlin.reflect.KClass
 import kotlin.reflect.KVisibility
@@ -147,9 +147,9 @@ class InstrumentationServer {
     }
 
     private fun debugLog(message: String) {
-        Timber.d("Instrumentation Server :: $message")
+        Log.d("Instrumentation Server", message)
     }
-    
+
     private fun invokeRecursively(data: Map<*, *>): List<Any> =
         data.entries.mapNotNull { parameter ->
             if (parameter.value is Map<*, *>) {

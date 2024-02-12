@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "jc"
 include(":app")
- 
+include(":InstrumentationServer")
