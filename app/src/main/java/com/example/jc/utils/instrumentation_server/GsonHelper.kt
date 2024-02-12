@@ -1,7 +1,5 @@
 package com.example.jc.utils.instrumentation_server
 
-if
-
 import com.google.gson.Gson
 import kotlinx.coroutines.sync.Mutex
 
